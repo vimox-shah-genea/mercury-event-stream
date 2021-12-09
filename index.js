@@ -26,9 +26,6 @@ axios({
                 });
             }
         }
-        // if(line.includes('<?xml')){
-        //     console.log(line)
-        // }
         
         });
     // response.data.pipe(fs.createWriteStream("./my.txt"));
