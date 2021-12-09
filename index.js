@@ -28,6 +28,18 @@ axios({
         }
         
         });
+
+    response.data.on('end', () => {
+        console.log("READ STREAM END");
+        });
+    
+    response.data.on('close', () => {
+    console.log("READ STREAM CLOSE");
+    });
+    
+    response.data.on('error', (error) => {
+    console.error("READ STREAM ERROR", error);
+    });
     // response.data.pipe(fs.createWriteStream("./my.txt"));
 }).catch(function (error) {
     console.log(error);
